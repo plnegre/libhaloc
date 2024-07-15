@@ -136,7 +136,6 @@ void Hash::initProjections() {
     // Push the new vector
     r_.push_back(unitVector(new_v));
   }
-  std::cout << "dbg 3" << std::endl;
 }
 
 std::vector<float> Hash::computeRandomVector(const int &size, const int &seed) {
