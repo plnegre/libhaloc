@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>libhaloc</name>
+  <version>0.0.1</version>
+
+  <description>
+    Hash-Based Loop Closure Detection Library
+  </description>
+
+  <author email="pl.negre@uib.cat">Pep Lluis Negre</author>
+  <maintainer email="pl.negre@uib.cat">Pep Lluis Negre</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>
