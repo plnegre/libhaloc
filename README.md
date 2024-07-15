@@ -1,7 +1,7 @@
 libhaloc
 =============
 
-ROS library for HAsh-based LOop Closure detection. This library provides the tools for loop closure detection based on image hashing. Image hashing consists of representing every image with a small vector (hash). Then the hash of image A can be compared with the hash of image B in a super fast way in order to determine if images are similar.
+Library for HAsh-based LOop Closure detection. This library provides the tools for loop closure detection based on image hashing. Image hashing consists of representing every image with a small vector (hash). Then the hash of image A can be compared with the hash of image B in a super fast way in order to determine if images are similar.
 
 The image hashing implemented in this library is based on floating point features.
 
@@ -82,7 +82,9 @@ int best_n_candidates = 3;  // It will retrieve the best N candidates for closin
 std::vector<uint> candidates = haloc_.process(image_id, image, best_n_candidates, discarded);  // This returns a vector of the best N candidates to close a loop with the current image.
 ```
 
-Note that you are responsible to provide a unique ID for each image. The IDs don't need to be consecutives.
+Note that:
+* You are responsible for providing a unique ID for each image. The IDs do not need to be consecutive.
+* Candidates are not geometrically validated, i.e. some are false positives. You are responsible for verifying the candidates.
 
 [stereo_slam]: https://github.com/srv/stereo_slam
 [paper]: http://link.springer.com/article/10.1007/s10514-015-9522-4
